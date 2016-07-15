@@ -1,0 +1,66 @@
+/* Clearing */
+
+.clear:before, .clear:after, [class*="content"]:before, [class*="content"]:after, [class*="site-main"]:before, [class*="site-main"]:after {
+  content: '';
+  display: table;
+}
+.clear:after, [class*="content"]:after, [class*="site-main"]:after {
+  clear: both;
+}
+/* main style*/
+.site-main {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+}
+.left-show {
+    margin: 4% 0;
+    text-align: center;
+    width: 50%;
+    position: relative;
+    z-index: 11;
+    height: auto;
+    display: block;
+}
+#show {
+  display: inline-block;
+}
+.showCode{
+    margin-top: 7%;
+}
+main {
+  width: 50%;
+  padding: 60px 5%;
+  float: right;
+  position: fixed;
+}
+main > a {
+  margin: 1%;
+}
+
+/*code style*/
+
+pre {
+    overflow: auto;
+    margin: 20px 0;
+    padding: 15px;
+    font-size: 13px;
+    color: #4d4d4c;
+    background: #f7f7f7;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: distribute;
+    display: block;
+}
+code,
+pre {
+    font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
+}
+code {
+    padding: 2px 4px;
+    word-break: break-all;
+    color: #4d4d4c;
+    border-radius: 4px;
+    font-size: 13px;
+}
