@@ -46,7 +46,7 @@
         },
         methods:{
             graphics:function(idx){
-                var doc = document.getElementById('show').className = idx
+                document.getElementById('show').className = idx
                 this.sheet = codes[idx]
             }
         }
