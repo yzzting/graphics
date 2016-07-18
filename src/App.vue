@@ -20,16 +20,16 @@
               </div>
           </div>
           <main>
-              <md-btn class="green" @click="graphics('square')">Square</md-btn>
-              <md-btn class="green" @click="graphics('rectangle')">Rectangle</md-btn>
-              <md-btn class="green" @click="graphics('parallelogram')">Parallelogram</md-btn>
-              <md-btn class="green" @click="graphics('circle')">Circle</md-btn>
-              <md-btn class="green" @click="graphics('oval')">Oval</md-btn>
-              <md-btn class="green" @click="graphics('triangle')">Triangle</md-btn>
-              <md-btn class="green" @click="graphics('starSix')">Star Six</md-btn>
-              <md-btn class="green" @click="graphics('starFive')">Star Five</md-btn>
-              <md-btn class="green" @click="graphics('egg')">Egg</md-btn>
-              <md-btn class="green" @click="graphics('diamond')">Diamond</md-btn>
+              <mdl-button colored class="mdl-button--raised" @click="graphics('square')" v-mdl-ripple-effect>Square</mdl-button>
+              <mdl-button colored class="mdl-button--raised" @click="graphics('rectangle')" v-mdl-ripple-effect>Rectangle</mdl-button>
+              <mdl-button colored class="mdl-button--raised" @click="graphics('parallelogram')" v-mdl-ripple-effect>Parallelogram</mdl-button>
+              <mdl-button colored class="mdl-button--raised" @click="graphics('circle')" v-mdl-ripple-effect>Circle</mdl-button>
+              <mdl-button colored class="mdl-button--raised" @click="graphics('oval')" v-mdl-ripple-effect>Oval</mdl-button>
+              <mdl-button colored class="mdl-button--raised" @click="graphics('triangle')" v-mdl-ripple-effect>Triangle</mdl-button>
+              <mdl-button colored class="mdl-button--raised" @click="graphics('starSix')" v-mdl-ripple-effect>Star Six</mdl-button>
+              <mdl-button colored class="mdl-button--raised" @click="graphics('starFive')" v-mdl-ripple-effect>Star Five</mdl-button>
+              <mdl-button colored class="mdl-button--raised" @click="graphics('egg')" v-mdl-ripple-effect>Egg</mdl-button>
+              <mdl-button colored class="mdl-button--raised" @click="graphics('diamond')" v-mdl-ripple-effect>Diamond</mdl-button>
           </main>
       </div>
   </div>
@@ -37,12 +37,16 @@
 
 <script>
     import codes from './codes/cssShow.js'
+    import covButton from './views/button.vue'
     export default {
         data(){
             return {
                 sheet:[],
                 codes
             }
+        },
+        components: {
+          covButton
         },
         methods:{
             graphics:function(idx){

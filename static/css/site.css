@@ -7,6 +7,9 @@
 .clear:after, [class*="content"]:after, [class*="site-main"]:after {
   clear: both;
 }
+ul {
+    line-height: 4!important;
+}
 /* main style*/
 .site-main {
   display: flex;
@@ -39,6 +42,9 @@ main > a {
   margin: 1%;
 }
 
+button {
+    margin: 1%!important;
+}
 /*code style*/
 
 pre {
