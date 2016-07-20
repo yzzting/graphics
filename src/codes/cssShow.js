@@ -139,7 +139,7 @@ let diamond = `.diamond {
     border-color: transparent transparent #ee6e73 transparent;
     border-width: 0 25px 25px 25px;
     height: 0;
-    width: 100px;
+    width: 50px;
     position: relative;
     margin: 20px 0 50px 0;
 }
