@@ -155,6 +155,22 @@ let diamond = `.diamond {
     border-width: 70px 50px 0 50px;
 }`
 
+let cross = `.cross{
+    position: relative;
+    height: 100px;
+    width: 20px;
+    background: #ee6e73;
+}
+.cross:after {
+    background: #ee6e73;
+    content: '';
+    height: 20px;
+    left: -40px;
+    position: absolute;
+    top: 40px;
+    width: 100px;
+}`
+
 export default {
   square,
   rectangle,
@@ -165,5 +181,6 @@ export default {
   starSix,
   starFive,
   egg,
-  diamond
+  diamond,
+  cross
 }

@@ -2,8 +2,6 @@
 #app > .mdl-layout__header{
     background: #ee6e73;
 }
-
-
 </style>
 
 <template>
@@ -39,6 +37,7 @@
             <mdl-button colored class="mdl-button--raised" @click="graphics('starFive')" v-mdl-ripple-effect>Star Five</mdl-button>
             <mdl-button colored class="mdl-button--raised" @click="graphics('egg')" v-mdl-ripple-effect>Egg</mdl-button>
             <mdl-button colored class="mdl-button--raised" @click="graphics('diamond')" v-mdl-ripple-effect>Diamond</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('cross')" v-mdl-ripple-effect>Cross</mdl-button>
         </main>
     </div>
 </div>

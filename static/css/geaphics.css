@@ -141,3 +141,18 @@
     border-color: #ee6e73 transparent transparent transparent;
     border-width: 70px 50px 0 50px;
 }
+.cross{
+    position: relative;
+    height: 100px;
+    width: 20px;
+    background: #ee6e73;
+}
+.cross:after {
+    background: #ee6e73;
+    content: '';
+    height: 20px;
+    left: -40px;
+    position: absolute;
+    top: 40px;
+    width: 100px;
+}
