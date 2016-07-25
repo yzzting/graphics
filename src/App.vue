@@ -21,7 +21,7 @@
     </header>
     <div class="site-main">
         <div class="left-show">
-            <div id="show"></div>
+            <div id="show" :class="s"></div>
             <div class="showCode">
                 <pre><code>{{sheet}}</code></pre>
             </div>
@@ -51,13 +51,14 @@ export default {
     data() {
             return {
                 sheet: [],
-                codes
+                codes,
+                s: null
             }
         },
         methods: {
             graphics: function(idx) {
-                document.getElementById('show').className = idx
-                this.sheet = codes[idx]
+              this.s = idx
+              this.sheet = codes[idx]
             }
         }
 }
