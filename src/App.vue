@@ -61,6 +61,6 @@ export default {
               this.sheet = codes[idx]
             }
         }
-}
+      }
 
 </script>
