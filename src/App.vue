@@ -25,6 +25,7 @@
             <div class="showCode">
                 <pre><code>{{sheet}}</code></pre>
             </div>
+            <!-- <input type=color placeholder="#ee6e73" v-model="selectColor"> -->
         </div>
         <main>
             <mdl-button colored class="mdl-button--raised" @click="graphics('square')" v-mdl-ripple-effect>Square</mdl-button>
@@ -47,19 +48,25 @@
 <script>
 
 import codes from './codes/cssShow.js'
+import 'material-design-lite/material.min.css'
+import 'material-design-lite/material.min.js'
 export default {
     data() {
             return {
                 sheet: [],
                 codes,
-                s: null
+                s: null,
+                // selectColor: '#ee6e73',
+                // rex: /#([\da-f]{3}){1,2}/i
             }
         },
         methods: {
             graphics: function(idx) {
               this.s = idx
               this.sheet = codes[idx]
-            }
+              // codes[idx].replace(/#([\da-f]{3}){1,2}/i,this.selectColor)
+              // console.log(codes[idx].replace(/#([\da-f]{3}){1,2}/i,this.selectColor))
+            },
         }
       }
 
