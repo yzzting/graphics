@@ -28,17 +28,15 @@
             <!-- <input type=color placeholder="#ee6e73" v-model="selectColor"> -->
         </div>
         <main>
-            <mdl-button colored class="mdl-button--raised" @click="graphics('square')" v-mdl-ripple-effect>Square</mdl-button>
-            <mdl-button colored class="mdl-button--raised" @click="graphics('rectangle')" v-mdl-ripple-effect>Rectangle</mdl-button>
-            <mdl-button colored class="mdl-button--raised" @click="graphics('parallelogram')" v-mdl-ripple-effect>Parallelogram</mdl-button>
-            <mdl-button colored class="mdl-button--raised" @click="graphics('circle')" v-mdl-ripple-effect>Circle</mdl-button>
-            <mdl-button colored class="mdl-button--raised" @click="graphics('oval')" v-mdl-ripple-effect>Oval</mdl-button>
-            <mdl-button colored class="mdl-button--raised" @click="graphics('triangle')" v-mdl-ripple-effect>Triangle</mdl-button>
-            <mdl-button colored class="mdl-button--raised" @click="graphics('starSix')" v-mdl-ripple-effect>Star Six</mdl-button>
-            <mdl-button colored class="mdl-button--raised" @click="graphics('starFive')" v-mdl-ripple-effect>Star Five</mdl-button>
-            <mdl-button colored class="mdl-button--raised" @click="graphics('egg')" v-mdl-ripple-effect>Egg</mdl-button>
-            <mdl-button colored class="mdl-button--raised" @click="graphics('diamond')" v-mdl-ripple-effect>Diamond</mdl-button>
-            <mdl-button colored class="mdl-button--raised" @click="graphics('cross')" v-mdl-ripple-effect>Cross</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('square',0)" v-mdl-ripple-effect>Square</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('rectangle',1)" v-mdl-ripple-effect>Rectangle</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('parallelogram',2)" v-mdl-ripple-effect>Parallelogram</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('circle',3)" v-mdl-ripple-effect>Circle</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('oval',4)" v-mdl-ripple-effect>Oval</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('triangle',5)" v-mdl-ripple-effect>Triangle</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('starFive',6)" v-mdl-ripple-effect>Star Five</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('diamond',7)" v-mdl-ripple-effect>Diamond</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('cross',8)" v-mdl-ripple-effect>Cross</mdl-button>
         </main>
     </div>
 </div>
@@ -56,17 +54,13 @@ export default {
                 sheet: [],
                 codes,
                 s: null,
-                // selectColor: '#ee6e73',
-                // rex: /#([\da-f]{3}){1,2}/i
             }
         },
         methods: {
-            graphics: function(idx) {
+            graphics: function(idx,i) {
               this.s = idx
-              this.sheet = codes[idx]
-              // codes[idx].replace(/#([\da-f]{3}){1,2}/i,this.selectColor)
-              // console.log(codes[idx].replace(/#([\da-f]{3}){1,2}/i,this.selectColor))
-            },
+              this.sheet = document.styleSheets[0].cssRules[i].style.cssText
+            }
         }
       }
 
