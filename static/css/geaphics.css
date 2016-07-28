@@ -44,11 +44,35 @@
   width: 200px;
   height: 200px;
   background: #ee6e73;
-  -webkit-clip-path:polygon(50% 100%, 100% 25%, 75% 0, 25% 0, 0 25%);
+  -webkit-clip-path: polygon(50% 100%, 100% 25%, 75% 0, 25% 0, 0 25%);
 }
 .cross {
   height: 200px;
   width: 200px;
   background: #ee6e73;
-  -webkit-clip-path:polygon(0% 40%,40% 40%,40% 0%,60% 0%,60% 40%,100% 40%,100% 60%,60% 60%,60% 100%,40% 100%,40% 60%,0 60%);
+  -webkit-clip-path: polygon(0% 40%, 40% 40%, 40% 0%, 60% 0%, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0 60%);
+}
+.pentagon {
+  height: 200px;
+  width: 200px;
+  background: #ee6e73;
+  -webkit-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+.hexagon {
+  height: 200px;
+  width: 200px;
+  background: #ee6e73;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+}
+.heptagon {
+  height: 200px;
+  width: 200px;
+  background: #ee6e73;
+  -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)
+}
+.octagon {
+  height: 200px;
+  width: 200px;
+  background: #ee6e73;
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)
 }

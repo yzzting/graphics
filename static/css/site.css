@@ -33,9 +33,8 @@ ul {
     margin-top: 7%;
 }
 main {
-  width: 50%;
+  width: 49%;
   padding: 60px 3%;
-  float: right;
   position: fixed;
 }
 main > a {

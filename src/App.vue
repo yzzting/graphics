@@ -37,6 +37,10 @@
             <mdl-button colored class="mdl-button--raised" @click="graphics('starFive',6)" v-mdl-ripple-effect>Star Five</mdl-button>
             <mdl-button colored class="mdl-button--raised" @click="graphics('diamond',7)" v-mdl-ripple-effect>Diamond</mdl-button>
             <mdl-button colored class="mdl-button--raised" @click="graphics('cross',8)" v-mdl-ripple-effect>Cross</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('pentagon',9)" v-mdl-ripple-effect>Pentagon</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('hexagon',10)" v-mdl-ripple-effect>Hexagon</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('heptagon',11)" v-mdl-ripple-effect>Heptagon</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('octagon',12)" v-mdl-ripple-effect>Octagon</mdl-button>
         </main>
     </div>
 </div>
@@ -45,21 +49,23 @@
 
 <script>
 
-import codes from './codes/cssShow.js'
 import 'material-design-lite/material.min.css'
 import 'material-design-lite/material.min.js'
 export default {
     data() {
             return {
                 sheet: [],
-                codes,
-                s: null,
+                s: null
             }
         },
         methods: {
             graphics: function(idx,i) {
               this.s = idx
-              this.sheet = document.styleSheets[0].cssRules[i].style.cssText
+              this.sheet = 'width: ' + document.styleSheets[0].cssRules[i].style.width + '\n' +
+                           'height: ' + document.styleSheets[0].cssRules[i].style.height + '\n' +
+                           'background-color: ' + document.styleSheets[0].cssRules[i].style.background + '\n' +
+                           'clip-path: ' + document.styleSheets[0].cssRules[i].style.webkitClipPath + '\n' +
+                           '-webkit-clip-path: ' + document.styleSheets[0].cssRules[i].style.webkitClipPath
             }
         }
       }
