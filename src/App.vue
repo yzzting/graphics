@@ -21,13 +21,13 @@
     </header>
     <div class="site-main">
         <div class="left-show">
-            <div id="show" :class="s"></div>
+            <div id="show" :class="s" :style="{background:selectColor}"></div>
             <div class="showCode">
                 <pre><code>{{sheet}}</code></pre>
             </div>
-            <!-- <input type=color placeholder="#ee6e73" v-model="selectColor"> -->
         </div>
-        <main>
+        <div class="rightBtn">
+          <section class="btnGroup">
             <mdl-button colored class="mdl-button--raised" @click="graphics('square',0)" v-mdl-ripple-effect>Square</mdl-button>
             <mdl-button colored class="mdl-button--raised" @click="graphics('rectangle',1)" v-mdl-ripple-effect>Rectangle</mdl-button>
             <mdl-button colored class="mdl-button--raised" @click="graphics('parallelogram',2)" v-mdl-ripple-effect>Parallelogram</mdl-button>
@@ -41,7 +41,11 @@
             <mdl-button colored class="mdl-button--raised" @click="graphics('hexagon',10)" v-mdl-ripple-effect>Hexagon</mdl-button>
             <mdl-button colored class="mdl-button--raised" @click="graphics('heptagon',11)" v-mdl-ripple-effect>Heptagon</mdl-button>
             <mdl-button colored class="mdl-button--raised" @click="graphics('octagon',12)" v-mdl-ripple-effect>Octagon</mdl-button>
-        </main>
+          </section>
+          <section class="colorBox">
+            <input type=color placeholder="#ee6e73" v-model="selectColor">
+          </section>
+        </div>
     </div>
 </div>
 
@@ -55,7 +59,8 @@ export default {
     data() {
             return {
                 sheet: [],
-                s: null
+                s: null,
+                selectColor: null
             }
         },
         methods: {
