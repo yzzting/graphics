@@ -21,7 +21,7 @@
     </header>
     <div class="site-main">
         <div class="left-show">
-            <div id="show" :class="s" :style="{background:selectColor}"></div>
+            <div id="show" :class="s" :style="{background:selectColor,width:widthSize + 'px',height:heightSize + 'px'}"></div>
             <div class="showCode">
                 <pre><code>{{sheet}}</code></pre>
             </div>
@@ -43,7 +43,11 @@
             <mdl-button colored class="mdl-button--raised" @click="graphics('octagon',12)" v-mdl-ripple-effect>Octagon</mdl-button>
           </section>
           <section class="colorBox">
-            <input type=color placeholder="#ee6e73" v-model="selectColor">
+            <input type="color" placeholder="#ee6e73" v-model="selectColor">
+          </section>
+          <section class="sizeBox">
+            <mdl-textfield floating-label="Width" :value.sync="widthSize"></mdl-textfield>
+            <mdl-textfield floating-label="Height" :value.sync="heightSize"></mdl-textfield>
           </section>
         </div>
     </div>
@@ -60,7 +64,7 @@ export default {
             return {
                 sheet: [],
                 s: null,
-                selectColor: null
+                selectColor: null,
             }
         },
         methods: {
@@ -72,6 +76,11 @@ export default {
                            'clip-path: ' + document.styleSheets[0].cssRules[i].style.webkitClipPath + '\n' +
                            '-webkit-clip-path: ' + document.styleSheets[0].cssRules[i].style.webkitClipPath
             }
+        },
+        computed: {
+          'width':function() {
+
+          }
         }
       }
 

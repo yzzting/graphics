@@ -41,7 +41,7 @@ ul {
 .btnGroup > a {
   margin: 1%;
 }
-.colorBox {
+.colorBox , .sizeBox{
   padding: 20px 3%;
 }
 
