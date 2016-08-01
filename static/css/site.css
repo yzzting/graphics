@@ -26,22 +26,25 @@ ul {
     height: auto;
     display: block;
 }
+.right-btn {
+  width: 50%
+}
 #show {
   display: inline-block;
 }
-.showCode{
+.show-code{
     margin-top: 7%;
 }
-.btnGroup {
+.btn-group {
   max-width: 700px;
 }
-.btnGroup {
+.btn-group {
   padding: 60px 3% 20px 3%;
 }
-.btnGroup > a {
+.btn-group > a {
   margin: 1%;
 }
-.colorBox , .sizeBox{
+.color-box , .size-box{
   padding: 20px 3%;
 }
 
@@ -56,6 +59,7 @@ input[type="color" i] {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
   height: 36px;
   min-width: 64px;
+  margin-right: 4em;
 }
 
 /*code style*/

@@ -22,12 +22,12 @@
     <div class="site-main">
         <div class="left-show">
             <div id="show" :class="s" :style="{background:selectColor,width:widthSize + 'px',height:heightSize + 'px'}"></div>
-            <div class="showCode">
+            <div class="show-code">
                 <pre><code>{{sheet}}</code></pre>
             </div>
         </div>
-        <div class="rightBtn">
-          <section class="btnGroup">
+        <div class="right-btn">
+          <section class="btn-group">
             <mdl-button colored class="mdl-button--raised" @click="graphics('square',0)" v-mdl-ripple-effect>Square</mdl-button>
             <mdl-button colored class="mdl-button--raised" @click="graphics('rectangle',1)" v-mdl-ripple-effect>Rectangle</mdl-button>
             <mdl-button colored class="mdl-button--raised" @click="graphics('parallelogram',2)" v-mdl-ripple-effect>Parallelogram</mdl-button>
@@ -42,10 +42,11 @@
             <mdl-button colored class="mdl-button--raised" @click="graphics('heptagon',11)" v-mdl-ripple-effect>Heptagon</mdl-button>
             <mdl-button colored class="mdl-button--raised" @click="graphics('octagon',12)" v-mdl-ripple-effect>Octagon</mdl-button>
           </section>
-          <section class="colorBox">
+          <section class="color-box">
             <input type="color" placeholder="#ee6e73" v-model="selectColor">
+            <mdl-textfield floating-label="Color" :value.sync="selectColor"></mdl-textfield>
           </section>
-          <section class="sizeBox">
+          <section class="size-box">
             <mdl-textfield floating-label="Width" :value.sync="widthSize"></mdl-textfield>
             <mdl-textfield floating-label="Height" :value.sync="heightSize"></mdl-textfield>
           </section>
@@ -60,28 +61,21 @@
 import 'material-design-lite/material.min.css'
 import 'material-design-lite/material.min.js'
 export default {
-    data() {
+  data() {
             return {
                 sheet: [],
                 s: null,
-                selectColor: null,
+                selectColor: '#ee6e73',
+                widthSize: '200',
+                heightSize: '200'
             }
         },
         methods: {
             graphics: function(idx,i) {
               this.s = idx
-              this.sheet = 'width: ' + document.styleSheets[0].cssRules[i].style.width + '\n' +
-                           'height: ' + document.styleSheets[0].cssRules[i].style.height + '\n' +
-                           'background-color: ' + document.styleSheets[0].cssRules[i].style.background + '\n' +
-                           'clip-path: ' + document.styleSheets[0].cssRules[i].style.webkitClipPath + '\n' +
+              this.sheet = 'clip-path: ' + document.styleSheets[0].cssRules[i].style.webkitClipPath + '\n' +
                            '-webkit-clip-path: ' + document.styleSheets[0].cssRules[i].style.webkitClipPath
             }
-        },
-        computed: {
-          'width':function() {
-
           }
         }
-      }
-
 </script>
