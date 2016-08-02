@@ -47,6 +47,19 @@ ul {
 .color-box , .size-box{
   padding: 20px 3%;
 }
+.size-box {
+  display: flex;
+  width: 100%
+}
+.input-box {
+  flex: 1;
+  width: 10%
+}
+.range-box {
+  flex: 2;
+  width: 90%;
+  margin-top: 6%;
+}
 
 button {
     margin: 1%!important;

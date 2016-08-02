@@ -2,6 +2,9 @@
 #app > .mdl-layout__header{
     background: #ee6e73;
 }
+.pos {
+  margin-top: 11%;
+}
 </style>
 
 <template>
@@ -47,8 +50,16 @@
             <mdl-textfield floating-label="Color" :value.sync="selectColor"></mdl-textfield>
           </section>
           <section class="size-box">
-            <mdl-textfield floating-label="Width" :value.sync="widthSize"></mdl-textfield>
-            <mdl-textfield floating-label="Height" :value.sync="heightSize"></mdl-textfield>
+            <div class="input-box">
+              <mdl-textfield floating-label="Width" :value.sync="widthSize"></mdl-textfield>
+              <mdl-textfield floating-label="Height" :value.sync="heightSize"></mdl-textfield>
+            </div>
+            <div class="range-box">
+              <mdl-slider :value.sync="widthSize" min="0" max="200"></mdl-slider>
+              <div class="pos">
+                <mdl-slider :value.sync="heightSize" min="0" max="200"></mdl-slider>
+              </div>
+            </div>
           </section>
         </div>
     </div>
@@ -65,9 +76,10 @@ export default {
             return {
                 sheet: [],
                 s: null,
+                checked: false,
                 selectColor: '#ee6e73',
-                widthSize: '200',
-                heightSize: '200'
+                widthSize: '100',
+                heightSize: '100'
             }
         },
         methods: {
