@@ -76,3 +76,27 @@
   background: #ee6e73;
   -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)
 }
+.rhombus {
+  width: 200px;
+  height: 200px;
+  background: #ee6e73;
+  -webkit-clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+}
+.leftArrow {
+  width: 200px;
+  height: 200px;
+  background: #ee6e73;
+  -webkit-clip-path: polygon(40% 0,40% 20%,100% 20%,100% 80%,40% 80%,40% 100%,0 50%);
+}
+.rightArrow {
+  width: 200px;
+  height: 200px;
+  background: #ee6e73;
+  -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+.message {
+  width: 200px;
+  height: 200px;
+  background: #ee6e73;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}

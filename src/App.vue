@@ -44,6 +44,10 @@
             <mdl-button colored class="mdl-button--raised" @click="graphics('hexagon',10)" v-mdl-ripple-effect>Hexagon</mdl-button>
             <mdl-button colored class="mdl-button--raised" @click="graphics('heptagon',11)" v-mdl-ripple-effect>Heptagon</mdl-button>
             <mdl-button colored class="mdl-button--raised" @click="graphics('octagon',12)" v-mdl-ripple-effect>Octagon</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('rhombus',13)" v-mdl-ripple-effect>Rhombus</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('leftArrow',14)" v-mdl-ripple-effect>leftArrow</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('rightArrow',15)" v-mdl-ripple-effect>rightArrow</mdl-button>
+            <mdl-button colored class="mdl-button--raised" @click="graphics('message',16)" v-mdl-ripple-effect>Message</mdl-button>
           </section>
           <section class="color-box">
             <input type="color" placeholder="#ee6e73" v-model="selectColor">
