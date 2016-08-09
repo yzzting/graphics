@@ -2,7 +2,7 @@
 
 一个点击就变的图形库，目前只有10+个图形
 
-[LIVE DEMO](http://zt.yzz1995.cn/)
+[LIVE DEMO](http://www.yzz1995.cn/graphics/index.html)
 
 ## Todo
 
@@ -10,7 +10,7 @@
 - [x] 添加颜色变化功能
 - [x] 第三方库分开打包
 
-## THX
+## Thx
 
 感谢 [Vue](http://vuejs.org.cn/)
 
